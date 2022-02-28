@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <ComposePost />
       {posts?.map((post) => {
-        return <Post post={post} />;
+        return <Post key={post.date} post={post} />;
       })}
     </div>
   );

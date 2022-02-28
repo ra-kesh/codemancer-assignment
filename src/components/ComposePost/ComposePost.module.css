@@ -9,6 +9,12 @@
   box-shadow: var(--shadow);
 }
 
+@media screen and (max-width: 760px) {
+  .container {
+    width: 80%;
+  }
+}
+
 .composePost {
   border: none;
   width: 100%;

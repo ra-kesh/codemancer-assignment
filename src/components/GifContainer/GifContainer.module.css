@@ -9,6 +9,13 @@
   border-radius: 0.5rem;
   background-color: beige;
 }
+
+@media screen and (max-width: 760px) {
+  .container {
+    width: 80%;
+  }
+}
+
 .gifs {
   height: 100%;
   margin: 0.5rem 0rem;
