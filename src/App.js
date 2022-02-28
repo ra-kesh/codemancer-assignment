@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { ComposePost } from "./components";
+import { usePost } from "./hoooks";
 
 function App() {
+  const {
+    state: { posts },
+  } = usePost();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ComposePost />
+      {posts?.map((post) => {
+        return (
+          <div key={post.date}>
+            <p>{post.text}</p>
+            <img src={post.gifUrl} alt="" />
+          </div>
+        );
+      })}
     </div>
   );
 }
