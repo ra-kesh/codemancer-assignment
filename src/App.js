@@ -1,4 +1,3 @@
-import "./App.css";
 import { ComposePost, Post } from "./components";
 import { usePost } from "./hoooks";
 
