@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
-  /* --color-main: #f3950d; */
-  /* --main-accent: #ffebcc; */
-  /* --bg: #f5eedc; */
-  /* --bg-2: #dce5ff; */
-  /* --main: #292c6d; */
   --shadow: rgba(17, 17, 26, 0.1) 2px 0px 16px;
 }
 * {
@@ -17,6 +12,5 @@
   box-sizing: border-box;
 }
 body {
-  /* background-color: var(--bg); */
   overflow-x: hidden;
 }

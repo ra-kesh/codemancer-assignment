@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { usePost } from "../../hoooks";
-import { GifContainer } from "./GifContainer";
+import GifContainer from "../GifContainer";
 import Styles from "./ComposePost.module.css";
 
 export default function ComposePost() {
@@ -26,7 +26,7 @@ export default function ComposePost() {
       <div>
         <textarea
           className={Styles.composePost}
-          placeholder="hello codemancer...write here.."
+          placeholder="write here.."
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
@@ -34,12 +34,23 @@ export default function ComposePost() {
       <div>
         <img src={gifUrl} alt="" />
       </div>
-      <div>
-        <button onClick={() => setShowGif((showGif) => !showGif)}>gif</button>
-        <button onClick={() => clickHandler()}>post</button>
+
+      <div className={Styles.button_container}>
+        <span onClick={() => setShowGif((showGif) => !showGif)}>add gifs</span>
+        <button className={Styles.button} onClick={() => clickHandler()}>
+          post
+        </button>
       </div>
 
-      {showGif && <GifContainer setGifUrl={setGifUrl} />}
+      {showGif && (
+        <div className={Styles.ModalWrapper}>
+          <div
+            className={Styles.ModalOverlay}
+            onClick={() => setShowGif(false)}
+          ></div>
+          <GifContainer setGifUrl={setGifUrl} />
+        </div>
+      )}
     </div>
   );
 }

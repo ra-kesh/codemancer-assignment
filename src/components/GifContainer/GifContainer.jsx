@@ -39,6 +39,7 @@ const GifContainer = ({ setGifUrl }) => {
         type="text"
         value={searchText}
         onChange={(e) => setSearchText(e?.target?.value)}
+        placeholder="search here.."
       />
       <div className={Styles.gifs}>
         {!isLoading &&
