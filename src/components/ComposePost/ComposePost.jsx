@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { usePost } from "../../hoooks";
 import { GifContainer } from "./GifContainer";
+import Styles from "./ComposePost.module.css";
 
 export default function ComposePost() {
   const [text, setText] = useState("");
@@ -21,14 +22,11 @@ export default function ComposePost() {
   }
 
   return (
-    <div>
+    <div className={Styles.container}>
       <div>
-        <div>compose</div>
         <textarea
-          name=""
-          id=""
-          cols="30"
-          rows="10"
+          className={Styles.composePost}
+          placeholder="hello codemancer...write here.."
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
