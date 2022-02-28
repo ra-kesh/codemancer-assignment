@@ -1,0 +1,29 @@
+.container {
+  height: 300px;
+  max-width: 30%;
+  margin: auto;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: beige;
+}
+.gifs {
+  height: 100%;
+  margin: 0.5rem 0rem;
+  overflow: auto;
+}
+
+.gifs::-webkit-scrollbar {
+  display: none;
+}
+
+.gifs {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.gif {
+  width: 100%;
+}
