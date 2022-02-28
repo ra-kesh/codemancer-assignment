@@ -8,7 +8,7 @@ const Post = ({ post }) => {
         <div className={styles.postHeader}>
           <div className={styles.postAvatar}>
             <img className={styles.postProfileImg} src="profile.png" alt="" />
-            <span className={styles.postUsername}>Rakesh</span>
+            <span className={styles.postUsername}>Rakesh Kumar</span>
           </div>
         </div>
         <div className={styles.postData}>

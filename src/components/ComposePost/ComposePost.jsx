@@ -23,20 +23,30 @@ export default function ComposePost() {
 
   return (
     <div className={Styles.container}>
-      <div>
-        <textarea
-          className={Styles.composePost}
-          placeholder="write here.."
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-        />
-      </div>
+      <textarea
+        className={Styles.composePost}
+        placeholder="write here.."
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+      />
       <div>
         <img src={gifUrl} alt="" />
       </div>
 
       <div className={Styles.button_container}>
-        <span onClick={() => setShowGif((showGif) => !showGif)}>add gifs</span>
+        {gifUrl ? (
+          <span className={Styles.removeGif} onClick={() => setGifUrl(null)}>
+            {" "}
+            remove gif
+          </span>
+        ) : (
+          <span
+            className={Styles.addGif}
+            onClick={() => setShowGif((showGif) => !showGif)}
+          >
+            add gif
+          </span>
+        )}
         <button className={Styles.button} onClick={() => clickHandler()}>
           post
         </button>
